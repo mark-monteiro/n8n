@@ -639,7 +639,7 @@ async function proxyRequestToAxios(
 					return;
 				}
 
-				Logger.debug('Request proxied to Axios failed', { error });
+				Logger.debug('Request proxied to Axios failed', JSON.parse(error.toJSON()));
 
 				// Axios hydrates the original error with more data. We extract them.
 				// https://github.com/axios/axios/blob/master/lib/core/enhanceError.js
